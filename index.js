@@ -18,7 +18,7 @@ app.set('view engine', '.hbs'); //motor de vistas en hbs
 
 
 //rutas
-app.use(require('./routes/index'));
+app.use(require('./src/routes/index'));
 
 //Servidor
 app.listen(app.get('port'), () => {
