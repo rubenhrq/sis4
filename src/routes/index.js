@@ -1,12 +1,15 @@
 const router = require('express').Router();
 
 router.get('/login', (req, res) => {
-    res.render('../views/login.hbs');
+    res.render('../views/login');
 });
-router.get('/register', (req, res) => {
-    res.render('../views/register.hbs');
-});
+
 router.get('/', (req, res) => {
-    res.render('../views/partials/');
+    res.render('../views/login');
 });
-module.exports=router;
+
+router.get('/register', (req, res) => {
+    res.render('../views/register');
+});
+
+module.exports = router;

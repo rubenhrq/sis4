@@ -4,9 +4,10 @@ const path = require('path');
 
 
 //configuraciones
-const app = express()
+const app = express();
+require('./database');
 app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.engine('.hbs', exphbs.engine({
   defaultLayout: 'main', //propiedades de handlerbars //crear carpeta views/layouts/main.hbs
   layoutsDir: path.join(app.get('views'),'layouts'),
