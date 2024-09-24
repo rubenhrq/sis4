@@ -13,7 +13,7 @@
     "app-sistel3": "file:",
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1",
-    "mongoose": "^8.6.1"
+    "mongoose": "^8.6.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
