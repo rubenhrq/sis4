@@ -10,11 +10,14 @@ COPY package*.json ./
 # Instala las dependencias
 RUN npm install
 
+# Instala PM2 globalmente
+RUN npm install -g pm2
+
 # Copia el resto del código de la aplicación al contenedor
 COPY . .
 
 # Expone el puerto en el que la aplicación escucha (ajusta según tu aplicación)
 EXPOSE 3000
 
-# Comando para ejecutar la aplicación
-CMD ["npm", "start"]
+# Comando para ejecutar la aplicación con PM2
+CMD ["pm2-runtime", "start", "index.js"]
